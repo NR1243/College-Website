@@ -1,0 +1,427 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+.header,.courses,.campuses,.facilities,.testimonials{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(./images/banner.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+}
+nav{
+    display: flex;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+    padding-left: 20px;
+}
+.nav-links{
+    flex:1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display:inline-block;
+    padding: 8px 12px;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background:#f44336;
+    display: block;
+    margin: auto;
+    transition: 0.2s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.us-button,.button,.submit-button{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 15px;
+    position: relative;
+    transition: 0.3s;
+}
+.us-button::before,.button::before,.submit-button::before{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background:#f44336;
+    display: block;
+    margin: auto;
+    position: absolute;
+    left: -25px;
+    top: 22px;
+    transition: 0.3s;
+}
+.us-button::after,.button::after,.submit-button::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background:#f44336;
+    display: block;
+    margin: auto;
+    position: absolute;
+    right: -25px;
+    top: 22px;
+    transition: 0.3s;
+}
+.us-button:hover::before,.us-button:hover::after,.submit-button:hover::after,.submit-button:hover::before{
+    width: 11%;
+}
+.us-button:hover,.button:hover,.submit-button:hover{
+    cursor: pointer;
+    background:#f44336 ;
+}
+
+
+.courses h1,.campuses h1,.facilities h1,.testimonials h1,.cta h1{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 1000;
+    color: #fff;
+}
+.row{
+    margin-top: 7%;
+    display: flex;
+    justify-content: space-around;
+}
+.courses .column{
+    border-radius: 10px;
+    padding:20px 12px ;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur( 4.5px );
+    width: 20%;
+    border: 1px solid rgba(255,255,255,0.18);
+    box-sizing: border-box;
+    word-wrap: break-word;
+    transition: 0.3s;
+    font-weight: 700;
+    text-align: center;
+}
+.courses h3{
+    font-weight: 1000;
+    color: #f44336;
+}
+.column:hover{
+    transform: scale(1.05);
+}
+
+
+.campus-row{
+    margin-top: 7%;
+    display: flex;
+    justify-content: space-around;
+}
+.campus-col{
+    height: 450px;
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.campus-col img{
+    width: 100%;
+    height: 100%;
+}
+.layer{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    transition: 0.5s;
+}
+.layer:hover{
+    background:rgba(226,0,0,0.7);
+}
+.layer h2{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h2{
+    bottom: 49%;
+    left: 90%;
+    opacity: 1;
+}
+
+.facilities-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: center;
+    color: #fff;
+}
+.facilities img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.testimonials-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding:25px;
+    cursor: pointer;
+    display: flex;
+}
+.testimonials{
+    height: 120vh;
+}
+.testimonials img{
+    height:40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.testimonials h3{
+    margin-top: 120px;
+}
+.testimonials .enroll{
+    margin-left: 130px;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(./images/banner2.jpg);
+    width:80%;
+    height:40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: 10px;
+}
+
+.button:hover::before,.button:hover::after{
+    width:18%;
+}
+
+.footer{
+    height:40vh;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    color: #fff;
+    background: rgb(18, 18, 19)
+}
+.footer .icons{
+    width:200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 30px;
+    color: #fff;
+    margin-left: 575px;
+}
+
+.sub-header,.course-header{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(./images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1,.course-header h1{
+    margin-top: 100px;
+    font-size: 100px;
+}
+.blog-header h1{
+    margin-top: 100px;
+    font-size: 70px;
+    color: #fff;
+    text-align: center;
+}
+.about-us{
+    width: 80%;
+    margin:auto;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.about-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.about-col .us-button{
+    color: black;
+    border: 1px solid black;
+}
+.about-col h1{
+    padding-left: 100px;
+    font-size: 30px;
+}
+.explore:hover{
+   color: #fff;
+}
+.explore:hover::before,.explore:hover::after{
+    width:15%;
+}
+.fa-github{
+    color: #fff;
+}
+.course-header{
+    background-attachment: fixed;
+}
+.blog-body{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(./images/pexels-element-digital-1370296.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    background-attachment: fixed;
+}
+.blog-content{
+    margin-top: 200px;
+}
+.blog-content h2{
+    color: #fff;
+    font-size: 30px;
+}
+.blog-content p{
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    width: 70%;
+    margin-left: 200px;
+}
+.comment-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid #ccc;
+    margin: 20px 330px;
+    width: 50%;
+    height: 500px;
+    background: rgba( 255, 255, 255, 0.1 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 5.5px );
+-webkit-backdrop-filter: blur( 5.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+::placeholder{
+    color: #fff;
+}
+.comment-box h3{
+    color: #fff;
+    font-size: 25px;
+}
+.comment-form input,.comment-form textarea{
+    width: 80%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    border-radius: 10px;
+    color: #fff;
+    transition: 0.2s;
+}
+.submit-button{
+    background: transparent;
+}
+.submit-button:hover::before,.submit-button:hover::after{
+    width: 23px;
+}
+.fa{
+    transition: 0.3s;
+}
+.fa:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+}
+.fa-facebook:hover{
+    color: #4267b2;
+}
+.fa-twitter:hover{
+    color: #1da1f2;
+}
+.fa-instagram:hover{
+   color: pink;
+}
+.fa-linkedin:hover{
+    color:#0e76a8;
+}
+.fa-heart:hover{
+    color: red;
+}
+.comment-box input:hover,.comment-box textarea:hover{
+    transform: scale(1.05);
+}
+.contact-header{
+    height: 70vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(./images/pexels-andrea-piacquadio-845451.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+}
+.contact-header h1{
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+    margin-top: 100px;
+}
+.location{
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(./images/pexels-andrea-piacquadio-845451.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+}
+.location h2{
+    color: #fff;
+    text-align: center;
+}
+.location iframe{
+    width: 80%;
+    margin-left: 150px;
+}
